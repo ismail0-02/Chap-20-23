@@ -4,12 +4,12 @@
 // // let cities = ["Karachi","Lahore","Islamabad","Quetta","Peshawar"];
 
 // // for(let i =0;i<5;i++){
-    
+
 // //     if(user  == cities[i]){
 // //         alert("City found");
 // //         break;
 // //     }
-   
+
 // // }
 
 // //  var cityToCheck = prompt("Enter your city");
@@ -45,11 +45,11 @@
 //     // console.log(upper);
 //     let removeFirstChar = returnVal[i].slice(1)
 //     // console.log(removeFirstChar);
-    
+
 //     let updatedValue= " " + upper    + removeFirstChar 
 //     para += updatedValue
 //     // console.log(para);
-    
+
 // }
 // let newPara =para.split(" ").slice(4).join(" ")
 // console.log(newPara)
@@ -85,14 +85,14 @@ console.log("----------Chap(21-25)----------");
 let word = "Pakistani";
 let index = word.lastIndexOf("n");
 console.log(word);
-console.log("The last index of 'n':",index);
+console.log("The last index of 'n':", index);
 
 // ques 4//
 //ans 4//
 let word2 = "hello world";
 let index2 = word2.lastIndexOf("l");
 console.log(word2)
-console.log("The last index of 'l' :",index2);
+console.log("The last index of 'l' :", index2);
 
 //ques 5//
 //ans 5//
@@ -100,7 +100,7 @@ console.log("The last index of 'l' :",index2);
 let word3 = "Pakistani";
 let index3 = word3.charAt(3);
 console.log(word3);
-console.log("the Character at index 3 is :",index3);
+console.log("the Character at index 3 is :", index3);
 
 //ques 6//
 //ans 6//
@@ -115,27 +115,27 @@ console.log("the Character at index 3 is :",index3);
 
 //ques 7//
 //ans 7//
- 
+
 let city = "Hyderabad";
-let repalce = city.replace("Hyder","Islam");
+let repalce = city.replace("Hyder", "Islam");
 console.log(city);
 console.log(repalce);
 //ques 8//
 //ans 8//
 let message = "Ali and Sami are best friends.They play cricket and football together.";
 console.log(message);
-let replace2 = message.replace("and","&")
+let replace2 = message.replace("and", "&")
 console.log(replace2);
 
 //ques 9//
 //ans 9//
 let value = "472";
-console.log("value :",value);
-console.log("Type of value is ",typeof value);
+console.log("value :", value);
+console.log("Type of value is ", typeof value);
 
-value =Number(value);
-console.log("value :",value);
-console.log("Type of value is ",typeof value);
+value = Number(value);
+console.log("value :", value);
+console.log("Type of value is ", typeof value);
 
 // //ques 10//
 // //ans 10//
@@ -150,25 +150,25 @@ console.log("Type of value is ",typeof value);
 let para = "javascript is a fun programming language";
 let returnVal = para.split(" ");
 // console.log(returnVal);
-for(let i=0;i<returnVal.length;i++){
+for (let i = 0; i < returnVal.length; i++) {
     // console.log(returnVal[i]);
-let upper = returnVal[i][0].toUpperCase();
-let remain = returnVal[i].slice(1);
-let  update = upper + remain;
-// console.log(update);
-para += " "+update
+    let upper = returnVal[i][0].toUpperCase();
+    let remain = returnVal[i].slice(1);
+    let update = upper + remain;
+    // console.log(update);
+    para += " " + update
 }
 let newPara = para.split(" ").slice(6).join(" ");
 console.log(newPara);
 
 
- 
+
 //ques 12//
 //ans 12//
 let num = 35.36;
-let converon =num.toFixed(2).replace(".","");
-console.log("Number :",num);
-console.log("Result :",converon);
+let converon = num.toFixed(2).replace(".", "");
+console.log("Number :", num);
+console.log("Result :", converon);
 
 // // //ques 13//
 // // //ans 13//
@@ -188,7 +188,7 @@ console.log("Result :",converon);
 //  let userSearch = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
 
 //  userSearch = userSearch.toLowerCase();
-   
+
 //     for(let i =0;i<a.length;i++){
 //         if(userSearch ==a[i]){
 //             console.log(userSearch,"is available at ",i,"index in our bakery"); 
@@ -197,18 +197,76 @@ console.log("Result :",converon);
 //             console.log("WE are sorry.",userSearch," is not available in our bakery");          
 //          break;       
 //         }
-        
+
 //     }
 // //ques 15//
 // //ans 15//
+// function checkPass() {
+
+
+//     let pass = prompt("Generate your password !").toUpperCase();
+//     let correctPass = false;
+//     let passAbhi = "no"
+
+//     if(pass == ""){
+//         return console.log("Password cannot be empty!");
+//     }
+//     // a  //
+//     if (pass) {
+//         for (let i = 0; i < pass.length; i++) {
+//             if (pass.charCodeAt(i) >= 65 && pass.charCodeAt(i) <= 90) {
+//                 passAbhi = "yes"
+//             }
+//         }
+//     }
+//     if (passAbhi == "yes") {
+//         for (let i = 0; i < pass.length; i++) {
+//             if (pass.charCodeAt(i) >= 48 && pass.charCodeAt(i) <= 57) {
+//                 correctPass = true;
+//             }
+//         }
+//     }
+//     if (correctPass) {
+//         console.log("Password is correct!");
+
+//     } else {
+//         if (passAbhi == "no") {
+//             console.log("Password must contain alphabets!");
+//             return;
+//         } else {
+//             console.log("Password must contain numbers!");
+//             return;
+//         }
+//     }
+
+//     // b  //
+//     if (pass.slice(0, 1) >= 0 && pass.slice(0, 1) <= 9) {
+//         return console.log("Password Should not start with a number!");
+
+//     }
+
+
+//     // c  //
+
+//     if (pass.length < 6) {
+//         console.log("Password length must be 6 characters long!");
+//     }
+
+
+//    console.log(pass)
+
+   
+
+
+// } checkPass();
 
 // //ques 16//
 // //ans 16//
 let university = "University of karachi";
 let split = university.split("");
 console.log(split);
-for (let i=0;i<split.length;i++){
-    console.log(split[i]); 
+for (let i = 0; i < split.length; i++) {
+    console.log(split[i]);
 }
 
 // // //ques 17//
@@ -222,14 +280,15 @@ for (let i=0;i<split.length;i++){
 //ans 18//
 let text = "The quick brwon fox jumps over the lazy dog.";
 let count = 0;
- for(let i = 0 ;i<text.length;i++){
-    if(text.slice(i,i+3) == "the" || text.slice(i,i+3) == "The"){
-       console.log(text.slice(i,i+3));
-       count= count+1;
-       
- }}
+for (let i = 0; i < text.length; i++) {
+    if (text.slice(i, i + 3) == "the" || text.slice(i, i + 3) == "The") {
+        console.log(text.slice(i, i + 3));
+        count = count + 1;
 
-console.log("Text ==>",text);
+    }
+}
+
+console.log("Text ==>", text);
 console.log(`There are ${count} occurence of the word "the"`);
 
 
